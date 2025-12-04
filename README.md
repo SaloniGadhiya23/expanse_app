@@ -9,8 +9,6 @@ This project provides a minimal setup for React with Vite (bundling & HMR) along
 - [Installation](#installation)  
 - [Usage](#usage)  
 - [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
-- [License](#license)  
 
 ## Features  
 
@@ -67,18 +65,9 @@ expanse_app/
 ├── public/           # Static files (index.html etc.)
 ├── src/              # React source code
 │   ├── components/   # React components
-│   ├── styles/       # CSS / styling files
 │   └── App.jsx       # Main React entry
 ├── .gitignore
 ├── package.json
 ├── vite.config.js
 └── README.md         # You are here
 ```  
-
-## Contributing  
-
-Contributions, issues and feature requests are welcome. Feel free to open an issue or submit a pull request.
-
-## License  
-
-This project is open source — feel free to choose a license (e.g., MIT, GPL) and state it here.
