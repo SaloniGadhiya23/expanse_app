@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from "./components/Navbar";
+import AddGroup from "./components/AddGroup";
+import AddMember from "./components/AddMember";
+import AddExpense from "./components/AddExpense";
+import ExpenseList from "./components/ExpenseList";
+import BalanceSummary from "./components/BalanceSummary";
+import { ExpenseProvider, useExpense } from "./context/ExpenseContext";
+
+function Content() {
+  const { theme } = useExpense();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={theme === "dark" ? "dark-mode" : ""}>
+      <Navbar />
+
+      <div className="container">
+        <div className="row g-4">
+          <div className="col-md-4"><AddGroup /></div>
+          <div className="col-md-4"><AddMember /></div>
+          <div className="col-md-4"><AddExpense /></div>
+        </div>
+
+        <div className="mt-4">
+          <ExpenseList />
+          <BalanceSummary />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <ExpenseProvider>
+      <Content />
+    </ExpenseProvider>
+  );
+}
