@@ -1,16 +1,84 @@
-# React + Vite
+# Expanse App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web‑app built using React + Vite for tracking and managing expenses.  
+This project provides a minimal setup for React with Vite (bundling & HMR) along with some standard linting rules.
 
-Currently, two official plugins are available:
+## Table of Contents  
+- [Features](#features)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Project Structure](#project-structure)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features  
 
-## React Compiler
+- Manage expense entries (add, edit, delete)  
+- Responsive UI using modern React + Vite setup  
+- ESLint for code quality  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*(You can expand this section as you add more features: filtering, categorization, charts, etc.)*
 
-## Expanding the ESLint configuration
+## Prerequisites  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (version 14 or above recommended)  
+- npm (or yarn)  
+
+## Installation  
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/SaloniGadhiya23/expanse_app.git
+   ```  
+2. Navigate to project directory  
+   ```bash
+   cd expanse_app
+   ```  
+3. Install dependencies  
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```  
+
+## Usage  
+
+To start development server:  
+```bash
+npm run dev
+# or
+yarn dev
+```  
+
+To build for production:  
+```bash
+npm run build
+# or
+yarn build
+```  
+
+Then you can serve the built files using any static file server or deploy to hosting platforms.
+
+## Project Structure  
+
+```
+expanse_app/
+├── public/           # Static files (index.html etc.)
+├── src/              # React source code
+│   ├── components/   # React components
+│   ├── styles/       # CSS / styling files
+│   └── App.jsx       # Main React entry
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md         # You are here
+```  
+
+## Contributing  
+
+Contributions, issues and feature requests are welcome. Feel free to open an issue or submit a pull request.
+
+## License  
+
+This project is open source — feel free to choose a license (e.g., MIT, GPL) and state it here.
